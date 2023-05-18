@@ -32,13 +32,13 @@ searchBtn.on('click', function (event) {
     searchInput = document.getElementById("input").value;
     console.log(searchInput);
     console.log("button Clicked");
-fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchInput}&limit=5&appid=${apiKey}`)
+fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchInput}&limit=5&appid=${apiKey}`)
 .then(response => response.json()).then(data =>{
     inputName =data[0].name;
    console.log(inputName);
     inputLat =data[0].lat;
     inputLon =data[0].lon;
-fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${inputLat}&lon=${inputLon}&appid=${apiKey}&units=imperial`)
+fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${inputLat}&lon=${inputLon}&appid=${apiKey}&units=imperial`)
 .then(response => response.json()).then(data =>{
     currentTemp = `${data.list[0].main.temp}`;
    console.log("current Temp= " + currentTemp);
