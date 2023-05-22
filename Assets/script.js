@@ -78,7 +78,7 @@ $(function () {
 
               var presentDate = dayjs();
               var addDay = presentDate.add(i, "day");
-              var dayOfWeek = addDay.format("dddd-MMM-D");
+              var dayOfWeek = addDay.format("ddd-MMM-D");
               $("#day-" + i).text(dayOfWeek);
 
               forecastTempDeci = `${data.list[i].main.temp}`;
