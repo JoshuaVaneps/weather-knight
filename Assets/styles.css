@@ -1,18 +1,64 @@
 :root {
   font-size: 16px;
+  --radius-28: 28px;
+  --radius-16: 16px;
+  --radius-pill: 500px;
+  --radius-circle: 50%;
 }
 
 * {
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: rgb(50, 50, 50);
+}
+
+.hero {
+  height: 200px;
+  width: 100%;
+  background-image: url("./ezgif.com-resize\ \(1\).gif"); /*gives our image a source*/
+  background-size: auto; /*Scales the image (while preserving its ratio) to the smallest possible size to fill the container */
+}
+
+section {
+  background-color: rgb(90, 90, 90);
+  border-radius: var(--radius-28);
+}
+
+#header-5day {
+  border-radius: 28px, 28px, 0px, 0px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
 
 .card-body {
-  margin: 0;
+  background-color: rgb(90, 90, 90);
+  border-radius: var(--radius-16);
+}
+.card {
+  background-color: rgb(90, 90, 90);
+  border-radius: var(--radius-16);
+}
+
+#hour-9 {
+  border-left: solid rgb(90, 90, 90);
+  border-radius: var(--radius-16);
+}
+.current {
+  padding: 30px;
+  border: solid rgb(90, 90, 90);
+  border-radius: var(--radius-28);
+  color: rgb(129, 128, 128);
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 p {
   font-size: 1.1rem;
+  align-self: center;
 }
 
 .forecast {
@@ -25,4 +71,23 @@ h2 {
   justify-self: center;
   align-items: center;
   font-size: 3rem;
+  color: white;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+  .card-body {
+    flex-direction: column;
+  }
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+  }
+  .d-flex {
+    justify-self: center;
+  }
 }
