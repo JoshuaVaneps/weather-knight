@@ -19,7 +19,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand px-5 mx-3" href="#">
             <img
@@ -38,7 +38,7 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button class="btn btn-outline-warning" type="submit">
               Search
             </button>
           </form>
@@ -54,7 +54,7 @@
       >
         <div class="card col-12 col-md-8 m-0 px-2">
           <div class="card-body row m-0 p-0 justify-content-evenly">
-            <div class="current col-12 col-md-4 bg-dark" id="max-temp">
+            <div class="current col-12 col-md-4" id="max-temp">
               <img
                 src="./Assets/plus-front-premium.png"
                 alt="plus sign"
@@ -64,7 +64,7 @@
               <p>Max Temp:</p>
               <h2></h2>
             </div>
-            <div class="current col-12 col-md-4 bg-dark" id="sunrise">
+            <div class="current col-12 col-md-4" id="sunrise">
               <img
                 src="./Assets/sun-front-premium.png"
                 alt="sun sign"
@@ -74,7 +74,7 @@
               <p>Sun Rise:</p>
               <h2></h2>
             </div>
-            <div class="current col-12 col-md-4 bg-dark" id="sunset">
+            <div class="current col-12 col-md-4" id="sunset">
               <img
                 src="./Assets/moon-front-premium.png"
                 alt="moon sign"
@@ -84,7 +84,7 @@
               <p>Sun Set:</p>
               <h2></h2>
             </div>
-            <div class="current col-12 col-md-4 bg-dark" id="cloud">
+            <div class="current col-12 col-md-4" id="cloud">
               <img
                 src="./Assets/umbrella-front-premium.png"
                 alt="fire sign"
@@ -94,7 +94,7 @@
               <p>Cloudiness:</p>
               <h2></h2>
             </div>
-            <div class="current col-12 col-md-4 bg-dark" id="pressure">
+            <div class="current col-12 col-md-4" id="pressure">
               <img
                 src="./Assets/location-front-premium.png"
                 alt=" location sign"
@@ -104,7 +104,7 @@
               <p>Pressure:</p>
               <h2></h2>
             </div>
-            <div class="current col-12 col-md-4 bg-dark" id="feels-like">
+            <div class="current col-12 col-md-4" id="feels-like">
               <img
                 src="./Assets/map-pin-front-premium.png"
                 alt=" pin sign"
@@ -116,17 +116,15 @@
             </div>
           </div>
         </div>
-        <div class="card col-12 col-md-4 d-flex bg-dark">
-          <div class="card-header col-12 bg-dark text-light">
+        <div class="card col-12 col-md-4 d-flex">
+          <div class="card-header col-12 text-light">
             <h3>Today's Weather :</h3>
           </div>
           <h3
             id="day-0"
-            class="card-header card-dark bg-dark text-light border border-warning rounded"
+            class="card-header card-dark text-light border border-warning rounded"
           ></h3>
-          <div
-            class="card-body dark bg-dark text-light container-fluid d-inline-flex"
-          >
+          <div class="card-body dark text-light container-fluid d-inline-flex">
             <div class="forecastImg-0"></div>
             <h2 class="forecast" id="forecastWeather-0"></h2>
           </div>
@@ -135,33 +133,33 @@
       <section class="5-day row my-5 mx-2 col-12">
         <div
           id="header-5day"
-          class="card-header rounded-top bg-dark text-light p-4 col-12 col-md-12"
+          class="card-header rounded-top text-light p-4 col-12 col-md-12"
         >
           <h3>5 Day Forecast</h3>
         </div>
         <!-- Use justify-content utilities to change alignment of flex items on the main axis -->
         <div class="card-body col-12 d-flex py-2 px-3 justify-content-between">
-          <div id="hour-9" class="col-12 col-md-2 bg-dark text-light px-2">
+          <div id="hour-9" class="col-12 col-md-2 text-light px-2">
             <h4 id="day-1" class="p-2">Day 2 Forecast</h4>
             <div id="img" class="forecastImg-1"></div>
             <h2 class="forecast" id="forecastWeather-1"></h2>
           </div>
-          <div id="hour-9" class="col-12 col-md-2 bg-dark text-light px-2">
+          <div id="hour-9" class="col-12 col-md-2 text-light px-2">
             <h4 id="day-2" class="p-2">Day 3 Forecast</h4>
             <div class="forecastImg-2"></div>
             <h2 class="forecast" id="forecastWeather-2"></h2>
           </div>
-          <div id="hour-9" class="col-12 col-md-2 bg-dark text-light px-2">
+          <div id="hour-9" class="col-12 col-md-2 text-light px-2">
             <h4 id="day-3" class="p-2">Day 4 Forecast</h4>
             <div class="forecastImg-3"></div>
             <h2 class="forecast" id="forecastWeather-3"></h2>
           </div>
-          <div id="hour-9" class="col-12 col-md-2 bg-dark text-light px-2">
+          <div id="hour-9" class="col-12 col-md-2 text-light px-2">
             <h4 id="day-4" class="p-2">Day 5 Forecast</h4>
             <div class="forecastImg-4"></div>
             <h2 class="forecast" id="forecastWeather-4"></h2>
           </div>
-          <div id="hour-9" class="col-12 col-md-2 bg-dark text-light px-2">
+          <div id="hour-9" class="col-12 col-md-2 text-light px-2">
             <h4 id="day-5" class="p-2">Day 6 Forecast</h4>
             <div class="forecastImg-5"></div>
             <h2 class="forecast" id="forecastWeather-5"></h2>

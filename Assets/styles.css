@@ -4,6 +4,9 @@
   --radius-16: 16px;
   --radius-pill: 500px;
   --radius-circle: 50%;
+  --background: #131214;
+  --black-alpha-10: hsla(0, 0%, 0%, 0.1);
+  --surface: #1d1c1f;
 }
 
 * {
@@ -11,7 +14,11 @@
   padding: 0;
 }
 body {
-  background-color: rgb(50, 50, 50);
+  background-color: var(--background);
+}
+
+.navbar {
+  background-color: var(--background);
 }
 
 .hero {
@@ -22,11 +29,12 @@ body {
 }
 
 section {
-  background-color: rgb(90, 90, 90);
+  background-color: var(--surface);
   border-radius: var(--radius-28);
 }
 
 #header-5day {
+  background-color: var(--black-alpha-10);
   border-radius: 28px, 28px, 0px, 0px;
   display: flex;
   justify-content: center;
@@ -34,22 +42,24 @@ section {
 }
 
 .card-body {
-  background-color: rgb(90, 90, 90);
+  background-color: var(--surface);
   border-radius: var(--radius-16);
 }
 .card {
-  background-color: rgb(90, 90, 90);
+  background-color: var(--surface);
   border-radius: var(--radius-16);
 }
 
 #hour-9 {
-  border-left: solid rgb(90, 90, 90);
+  background-color: var(--black-alpha-10);
+  border-left: solid var(--surface);
   border-radius: var(--radius-16);
 }
 .current {
   padding: 30px;
-  border: solid rgb(90, 90, 90);
+  border: solid var(--surface);
   border-radius: var(--radius-28);
+  background-color: var(--black-alpha-10);
   color: rgb(129, 128, 128);
   font-size: 1rem;
   display: flex;
