@@ -93,6 +93,7 @@ h3 {
   .card-body {
     flex-direction: column;
   }
+
   .container-fluid {
     display: flex;
     justify-content: center;
