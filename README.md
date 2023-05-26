@@ -9,3 +9,7 @@ when you search ofor a city your presented with current and future conditions fo
 ## Deployment
 
 below you can see a quick screen shot of the app but you can click the link to see the deployued site.
+click the link below:
+https://joshuavaneps.github.io/weather-knight/
+
+![image](https://github.com/JoshuaVaneps/weather-knight/assets/111782130/e6e0c6ff-46f2-458b-9383-35b0d612c6d4)
