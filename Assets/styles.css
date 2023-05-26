@@ -89,6 +89,16 @@ h3 {
   justify-content: center;
 }
 
+#map {
+  width: 600vw;
+  height: 60vh;
+}
+
+textarea {
+  background-color: var(--surface);
+  border: none;
+  color: white;
+}
 @media screen and (max-width: 750px) {
   .card-body {
     flex-direction: column;

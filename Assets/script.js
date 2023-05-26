@@ -13,11 +13,26 @@ var currentWind;
 var currentConditions;
 var currentIcon;
 
+// $(".search-log").children("textarea").val(localStorage.getItem("current"));
+
 $(function () {
   searchBtn.on("click", function (event) {
     event.preventDefault();
 
     searchInput = document.getElementById("input").value;
+
+    // Retrieve existing data from local storage
+    var existingData = localStorage.getItem("current");
+
+    // Append the new search input to the existing data
+    var updatedData = existingData
+      ? existingData + ", " + searchInput
+      : searchInput;
+
+    // Store the updated data back into local storage
+    localStorage.setItem("current", updatedData);
+
+    document.getElementById("search").value = updatedData + " , ";
     console.log(searchInput);
     console.log("button Clicked");
     // fetching longitude and lattude of input city
@@ -31,6 +46,24 @@ $(function () {
         inputLat = data[0].lat;
         inputLon = data[0].lon;
         // fetching all relevant data from api usihg the lon and lat from geocode api
+
+        // map java script
+        mapboxgl.accessToken =
+          "pk.eyJ1Ijoiam9zaHVhdmFuZXBzIiwiYSI6ImNsaTQ0N3FvZzE0emEzZW8wbmMwdmNwbHYifQ.hha62sCgSu3bcZlJbj89gg";
+        const map = new mapboxgl.Map({
+          container: "map", // container ID
+          style: "mapbox://styles/mapbox/dark-v11", // style URL
+          center: [inputLon, inputLat], // starting position [lng, lat]
+          zoom: 9, // starting zoom
+        });
+        console.log(map);
+        // adding location to the map title
+
+        $(".map-title").children("h2").html("");
+
+        $(".map-title")
+          .children("h2")
+          .append("Current Location: " + inputName);
 
         fetch(
           `https://api.openweathermap.org/data/2.5/forecast?lat=${inputLat}&lon=${inputLon}&appid=${apiKey}&units=imperial`
